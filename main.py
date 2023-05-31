@@ -4,9 +4,10 @@ import urllib.request
 FileName =input("Dosyanin Tam Adini Giriniz:    ")
 
 if not os.path.exists(FileName):
-    download_link = input("İndirmek İstediğiniz Dosyanin linkini Giriniz:   ")
     print("Dosya mevcut değil.")
-    urllib.request.urlretrieve(download_link, FileName)
+    download_link = input("İndirmek İstediğiniz Dosyanin linkini Giriniz:   ")
+    urllib.request.urlretrieve(download_link)
+    print("Dosya indiriliyor...")
     print("Dosya indirildi.")
 else:
     print("Dosya mevcut.")
